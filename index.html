@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conectar con Profesionales</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba PsicoApp</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Profesionales Disponibles</h1>
-  </header>
-  <main>
-    <div id="professionals-list" class="professionals-grid"></div>
-  </main>
+    <div id="app">
+        <!-- Pantalla de inicio -->
+        <div id="home-screen">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>Bienvenido a PsicoApp</h1>
+            <button id="profesional-btn">Soy Profesional</button>
+            <button id="paciente-btn">Soy Paciente</button>
+        </div>
 
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registrado'))
-        .catch(err => console.log('Error al registrar Service Worker:', err));
-    }
-  </script>
+        <!-- Pantalla de registro/inicio de sesión para profesionales -->
+        <div id="profesional-screen" class="hidden">
+            <h2>Profesionales</h2>
+            <button id="registro-profesional-btn">Registrarse</button>
+            <button id="login-profesional-btn">Iniciar Sesión</button>
+            <button id="back-profesional-btn">Volver</button>
+        </div>
+
+        <!-- Pantalla de registro/inicio de sesión para pacientes -->
+        <div id="paciente-screen" class="hidden">
+            <h2>Pacientes</h2>
+            <button id="registro-paciente-btn">Registrarse</button>
+            <button id="login-paciente-btn">Iniciar Sesión</button>
+            <button id="omitir-paciente-btn">Omitir y Buscar Profesionales</button>
+            <button id="back-paciente-btn">Volver</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
