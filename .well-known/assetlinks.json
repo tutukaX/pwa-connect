@@ -1,10 +1,14 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.example.pruebapsicoapp" , 
-    "sha256_cert_fingerprints": [
-      "C7:23:38:4C:7C:4D:26:14:71:04:45:9B:3D:A7:67:A7:58:0E:32:22:E1:9E:84:BF:B6:37:16:D2:5C:95:F6:D8" 
-    ]
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.pruebapsicoapp",
+      "sha256_cert_fingerprints": [
+        "C7:23:38:4C:7C:4D:26:14:71:04:45:9B:3D:A7:67:A7:58:0E:32:22:E1:9E:84:BF:B6:37:16:D2:5C:95:F6:D8"
+      ]
+    }
   }
-}]
+]
