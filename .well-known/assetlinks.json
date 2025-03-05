@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.example.pruebapsicoapp",
+    "sha256_cert_fingerprints": ["C723384C7C4D26147104459B3DA767A7580E3222E19E84BFB63716D25C95F6D8"]
+  }
+}]

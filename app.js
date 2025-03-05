@@ -1,23 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const professionalsList = document.getElementById('professionals-list');
-  
-    // Datos de ejemplo (puedes reemplazar con una API real)
-    const professionals = [
-      { name: 'Dr. Juan Pérez', specialty: 'Psicólogo', phone: '1234567890' },
-      { name: 'Dra. Ana López', specialty: 'Nutricionista', phone: '0987654321' },
-      { name: 'Dr. Carlos Gómez', specialty: 'Médico General', phone: '1122334455' },
-    ];
-  
-    professionals.forEach(professional => {
-      const professionalDiv = document.createElement('div');
-      professionalDiv.className = 'professional';
-  
-      professionalDiv.innerHTML = `
-        <h2>${professional.name}</h2>
-        <p>Especialidad: ${professional.specialty}</p>
-        <a href="https://wa.me/${professional.phone}" target="_blank">Contactar por WhatsApp</a>
-      `;
-  
-      professionalsList.appendChild(professionalDiv);
-    });
-  });
+// Obtener referencias a los elementos del DOM
+const homeScreen = document.getElementById('home-screen');
+const profesionalScreen = document.getElementById('profesional-screen');
+const pacienteScreen = document.getElementById('paciente-screen');
+
+const profesionalBtn = document.getElementById('profesional-btn');
+const pacienteBtn = document.getElementById('paciente-btn');
+
+const backProfesionalBtn = document.getElementById('back-profesional-btn');
+const backPacienteBtn = document.getElementById('back-paciente-btn');
+
+// Mostrar pantalla de profesionales
+profesionalBtn.addEventListener('click', () => {
+    homeScreen.classList.add('hidden');
+    profesionalScreen.classList.remove('hidden');
+});
+
+// Mostrar pantalla de pacientes
+pacienteBtn.addEventListener('click', () => {
+    homeScreen.classList.add('hidden');
+    pacienteScreen.classList.remove('hidden');
+});
+
+// Volver a la pantalla de inicio desde profesionales
+backProfesionalBtn.addEventListener('click', () => {
+    profesionalScreen.classList.add('hidden');
+    homeScreen.classList.remove('hidden');
+});
+
+// Volver a la pantalla de inicio desde pacientes
+backPacienteBtn.addEventListener('click', () => {
+    pacienteScreen.classList.add('hidden');
+    homeScreen.classList.remove('hidden');
+});
+
+// Lógica para el botón "Omitir y Buscar Profesionales"
+const omitirPacienteBtn = document.getElementById('omitir-paciente-btn');
+omitirPacienteBtn.addEventListener('click', () => {
+    alert('Redirigiendo a la búsqueda de profesionales...');
+    // Aquí puedes redirigir a otra página o mostrar una lista de profesionales
+});
